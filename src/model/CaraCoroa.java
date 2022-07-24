@@ -32,9 +32,9 @@ import java.util.Random;
 
   	public CaraCoroa(){
   	componentes();
-    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
   	this.setTitle("Game Cara ou Coroa");
-    this.setSize(300,300);
+        this.setSize(300,300);
   	this.setLocationRelativeTo(null);
   	this.setResizable(false);
 	  this.setLayout(null);
@@ -53,12 +53,18 @@ import java.util.Random;
 		public void keyPressed(KeyEvent e) {
 		   // TODO Auto-generated method stub
 		   boolean n1 = random.nextBoolean();
-		  	if(n1){
-		    caraCoroa.setIcon(iconCara);
-	    	}else {
-	    	caraCoroa.setIcon(iconCoroa);
-    		}
-			}
+		if(e.getKeyCode() == 10){
+		 boolean n1 = random.nextBoolean();
+
+		  if(n1){
+		   caraCoroa.setIcon(iconCara);
+
+		  }else {
+		   caraCoroa.setIcon(iconCoroa);
+		
+		  }
+		 }
+		}
 
 		@Override
 		public void keyReleased(KeyEvent e) {
@@ -66,10 +72,12 @@ import java.util.Random;
 		   // System.out.println("Tecla: "+e.getKeyChar());
 		   // System.out.println("Tecla: "+e.getKeyCode());
       
-			 tempo(1000);
+		   if(e.getKeyCode() == 10){		
+		     tempo(1000);
+		     caraCoroa.setIcon(iconcaraCoroa);
+		   }
 		   caraCoroa.setIcon(iconcaraCoroa);
-
-					
+		   }		
 		}
     
     //Thread para da tempo do usuario ver a moeda que caiu 
