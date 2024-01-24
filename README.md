@@ -4,3 +4,4 @@
 
 Esse joguinho tem o intuito de ensinar o aluno a usar a classe JFrame e a implementar o KeyListener.
 Foi desenvolvido no bloco de notas para fixar melhor os conceitos.
+by:Diana
